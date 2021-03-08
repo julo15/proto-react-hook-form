@@ -13,4 +13,6 @@ export type TaskValue = {
 export type BriefFormValues = {
   title: string;
   task: TaskValue;
+  tasks: TaskValue[];
+  otherTask: TaskValue;
 };

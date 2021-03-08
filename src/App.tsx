@@ -5,6 +5,7 @@ import { BriefFormValues } from './Model/BriefFormValues';
 import TextInput from './Form/TextInput';
 import { FormController } from './Form/Shared';
 import Task from './Form/Task';
+import MainTask from './BriefForm/MainTask';
 
 const AppContainer = styled.div`
   display: flex;
@@ -54,12 +55,17 @@ const App = () => {
           />
         )}
         {showName && (
-          <Task<BriefFormValues>
+          <MainTask
             formController={formController}
             name="task"
             unregisterOnUnmount={true}
           />
         )}
+        <MainTask
+          formController={formController}
+          name="tasks.0"
+          unregisterOnUnmount={true}
+          />
         <Submit type="submit" />
       </Form>
     </AppContainer>
